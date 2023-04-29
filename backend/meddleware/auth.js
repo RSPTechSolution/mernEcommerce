@@ -11,8 +11,9 @@ exports.isAuthenticatedUser = catchAsyncError(async(req,res,next) => {
 
     const decodeData = jwt.verify(token,process.env.JWT_SECRET);
     
-    req.user = await User.findById(decodeData.id);
-    console.log(req.user);   
+    // console.log(decodeData);   
+
+    req.user = await User.findById(decodeData._id);
 
     next();
 });
@@ -20,7 +21,6 @@ exports.isAuthenticatedUser = catchAsyncError(async(req,res,next) => {
 //
 exports.authorizeRoles = (...roles) => {
   return (req, res, next) => {
-    // console.log(res);
     if (!roles.includes(req.user.role)) {
       return next(
         new ErrorHandler(
@@ -29,7 +29,6 @@ exports.authorizeRoles = (...roles) => {
         )
       );
     }
-
     next();
   };
 };
