@@ -1,9 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 import thunk from 'redux-thunk';
-import { productReducer } from './reducers/productReducer';
+import { productDetailsReducer, productReducer } from './reducers/productReducer';
 
 const reducer = {
   products: productReducer,
+  productDetails: productDetailsReducer,
 };
 
 const middleware = [thunk];
