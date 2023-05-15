@@ -2,9 +2,10 @@ import React, {useEffect} from 'react';
 import './App.css';
 import Footer from './component/layout/Footer/Footer';
 import Header from './component/layout/Header/Header';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import webfont from 'webfontloader';
 import Home from './component/Home/Home';
+import ProductDetails from './component/Product/ProductDetails'
 
 function App() {
   useEffect(() => {
@@ -17,7 +18,10 @@ function App() {
   return (
     <Router>
       <Header/>
-      <Home/>
+      <Routes>
+        <Route exact path="/" element={<Home/>} ></Route>
+        <Route exact path="/product/:id" element={<ProductDetails/>} ></Route>
+      </Routes>
       <Footer />
     </Router>
     
