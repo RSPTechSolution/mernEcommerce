@@ -4,13 +4,12 @@ import ReactStarts from "react-rating-stars-component";
 
 
 const Product = ({ product }) => {
-
   const options = {
       edit: false,
       color: "rgba(20,20,20,0.1)",
       activeColor: "tomato",
       size: window.innerWidth < 600 ? 20 : 22,
-      value:2.5,
+      value:product.ratings,
       isHalf: true,
   };
   return (
