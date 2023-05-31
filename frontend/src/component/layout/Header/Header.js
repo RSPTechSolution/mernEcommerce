@@ -27,6 +27,7 @@ const options = {
   link1ColorHover: "#eb4034",
   link1Margin: "1vmax",
   profileIcon: true,
+  profileIconUrl: "/login",
   profileIconColor: "rgba(35, 35, 35,0.8)",
   ProfileIconElement: MdAccountCircle,
   profileIconMargin: "20px",

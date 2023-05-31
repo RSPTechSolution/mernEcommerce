@@ -19,12 +19,12 @@ const Footer = () => {
 
         <p>Copyrights 2021 &copy; MeAbhiSingh</p>
       </div>
-
+    
       <div className="rightFooter">
         <h4>Follow Us</h4>
-        <a target="_blank" href="https://www.instagram.com/ratan_paul__/">Instagram</a>
-        <a target="_blank" href="http://youtube.com/ratan">Youtube</a>
-        <a target="_blank" href="https://www.instagram.com/ratan_paul__/">Facebook</a>
+        <a rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/ratan_paul__/">Instagram</a>
+        <a rel="noopener noreferrer" target="_blank" href="http://youtube.com/ratan">Youtube</a>
+        <a rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/ratan_paul__/">Facebook</a>
       </div>
     </footer>
   );
